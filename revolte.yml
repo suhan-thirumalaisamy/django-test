@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Revolte Beta Test
-  appName: Python Django
+  project: test-python
+  appName: django-project
   config:
     codeReview:
       summarize: true
@@ -31,11 +31,11 @@ revolte:
             loadBalancerMode: dedicated
             variables:
               BASE_URL: /
-              DATABASE_HOST: ep-morning-night-aqfia1du.c-8.us-east-1.aws.neon.tech
-              DATABASE_PORT: 5432
-              DATABASE_USER: neondb_owner
-              DATABASE_PASSWORD: npg_f9oFWg0tTRym
-              DATABASE_NAME: neondb
+              DATABASE_USER: '#{db.dbUsername}'
+              DATABASE_HOST: '#{db.dbUrl}'
+              DATABASE_PORT: '#{db.dbPort}'
+              DATABASE_PASSWORD: '#{db.dbPassword}'
+              DATABASE_NAME: '#{db.dbName}'
           specifications:
             cpu: 2
             memory: 1
@@ -57,7 +57,6 @@ revolte:
             variables:
               BASE_URL: /
               DATABASE_HOST: ep-morning-night-aqfia1du.c-8.us-east-1.aws.neon.tech
-              DATABASE_PORT: 5432
               DATABASE_USER: neondb_owner
               DATABASE_PASSWORD: npg_f9oFWg0tTRym
               DATABASE_NAME: neondb
@@ -82,7 +81,6 @@ revolte:
             variables:
               BASE_URL: /
               DATABASE_HOST: ep-morning-night-aqfia1du.c-8.us-east-1.aws.neon.tech
-              DATABASE_PORT: 5432
               DATABASE_USER: neondb_owner
               DATABASE_PASSWORD: npg_f9oFWg0tTRym
               DATABASE_NAME: neondb
@@ -118,7 +116,6 @@ revolte:
             variables:
               BASE_URL: /
               DATABASE_HOST: ep-morning-night-aqfia1du.c-8.us-east-1.aws.neon.tech
-              DATABASE_PORT: 5432
               DATABASE_USER: neondb_owner
               DATABASE_PASSWORD: npg_f9oFWg0tTRym
               DATABASE_NAME: neondb
