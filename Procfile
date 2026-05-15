@@ -1,1 +1,1 @@
-web: python manage.py runserver
+web: gunicorn myrevoltedjango.wsgi:application --bind 0.0.0.0:$PORT
