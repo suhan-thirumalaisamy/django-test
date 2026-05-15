@@ -16,7 +16,7 @@ revolte:
       enabled: true
   env:
     staging:
-      branch: main
+      branch: staging
       codeReview: true
       testSuite: true
       automationTestSuite: true
@@ -41,7 +41,7 @@ revolte:
             memory: 1
             storage: 30
     qa:
-      branch: main
+      branch: qa
       codeReview: true
       testSuite: true
       automationTestSuite: true
