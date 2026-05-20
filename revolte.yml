@@ -2,24 +2,12 @@ revolte:
   version: '1.0'
   project: test-python
   appName: django-project
-  config:
-    codeReview:
-      summarize: true
-      suggestFixes: true
-      commentStyle: Balanced
-    testSuite:
-      command: python3 manage.py test
-    automationTestSuite:
-      command: python3 manage.py test:automation
   workflow:
     developerWorkflow:
       enabled: true
   env:
     staging:
       branch: staging
-      codeReview: true
-      testSuite: true
-      automationTestSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -36,7 +24,6 @@ revolte:
               DATABASE_PORT: '#{db.dbPort}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
-              PORT: 8080
               ALLOWED_HOSTS: '*'
           specifications:
             cpu: 2
@@ -52,9 +39,6 @@ revolte:
             engine: postgres
     qa:
       branch: qa
-      codeReview: true
-      testSuite: true
-      automationTestSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -84,9 +68,6 @@ revolte:
             engine: postgres
     production:
       branch: main
-      codeReview: true
-      testSuite: true
-      automationTestSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -127,9 +108,6 @@ revolte:
             storage: 30
             engine: postgres
     preview:
-      codeReview: true
-      testSuite: true
-      automationTestSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
